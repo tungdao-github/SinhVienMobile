@@ -9,17 +9,32 @@ import android.database.Cursor;
 public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
-        super(context, "StudentApp.db", null, 2);
+        super(context, "StudentApp.db", null, 4);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE users(username TEXT PRIMARY KEY, password TEXT, role TEXT)");
         db.execSQL("CREATE TABLE students(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER, username TEXT)");
-        db.execSQL("CREATE TABLE subjects(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, credit INTEGER)");
-        db.execSQL("CREATE TABLE scores(id INTEGER PRIMARY KEY AUTOINCREMENT, student_id INTEGER, subject_id INTEGER, score REAL)");
+//        db.execSQL("CREATE TABLE subjects(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, credit INTEGER)");
+//        db.execSQL("CREATE TABLE scores(id INTEGER PRIMARY KEY AUTOINCREMENT, student_id INTEGER, subject_id INTEGER, score REAL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Score (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "username TEXT, " +
+                "subject TEXT, " +
+                "score REAL)");
 
-
+        db.execSQL("CREATE TABLE IF NOT EXISTS Schedule (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "username TEXT, " +
+                "subject TEXT, " +
+                "time TEXT, " +
+                "room TEXT)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Score (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "username TEXT, " +
+                "subject TEXT, " +
+                "score REAL)");
         db.execSQL("INSERT INTO users VALUES('admin', 'admin123', 'admin')");
         db.execSQL("INSERT INTO users VALUES('sv01', '123456', 'user')");
 

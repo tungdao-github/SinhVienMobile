@@ -16,6 +16,10 @@
         <activity android:name=".activities.RegisterActivity" android:exported="true"/>
         <activity android:name=".activities.AdminActivity" android:exported="true" />
         <activity android:name=".activities.StudentActivity" android:exported="true"/>
+        <activity android:name=".activities.ScoreActivity" />
+        <activity android:name=".activities.ScheduleActivity" />
+        <activity android:name=".activities.StudentScoreActivity" />
+        <activity android:name=".activities.StudentScheduleActivity" />
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

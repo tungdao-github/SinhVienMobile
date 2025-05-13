@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnAddScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm điểm" />
+
+    <TextView
+        android:id="@+id/txtGPA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GPA hiện tại: 0.0"
+        android:textStyle="bold"
+        android:padding="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewScores"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

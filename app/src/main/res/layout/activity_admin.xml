@@ -1,35 +1,51 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:padding="16dp">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="16dp">
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tên sinh viên" />
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tuổi"
-        android:inputType="number" />
+        <EditText android:id="@+id/name" android:hint="Tên sinh viên"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Username (liên kết với sinh viên)" />
+        <EditText android:id="@+id/age" android:hint="Tuổi"
+            android:inputType="number"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Thêm sinh viên" />
+        <EditText android:id="@+id/username" android:hint="Tên đăng nhập"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-</LinearLayout>
+        <Button android:id="@+id/btnAddStudent" android:text="➕ Thêm sinh viên"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/subject" android:hint="Tên môn học"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+
+        <EditText android:id="@+id/score" android:hint="Điểm"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+
+        <TextView android:text="📊 Bảng xếp hạng:"
+            android:textStyle="bold" android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <ListView android:id="@+id/listView"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnAddScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm điểm cho sinh viên"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnAddSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm TKB cho sinh viên"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>

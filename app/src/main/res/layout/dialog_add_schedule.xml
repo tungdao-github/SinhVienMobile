@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText android:id="@+id/etUsername"
+        android:hint="Username sinh vien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText android:id="@+id/edtSubject"
+        android:hint="Tên môn học"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <EditText android:id="@+id/edtDay"
+        android:hint="Thứ (VD: Thứ 2)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText android:id="@+id/edtTime"
+        android:hint="Tiết học (VD: 1-3)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText android:id="@+id/edtRoom"
+        android:hint="Phòng học"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm Thoi khoa bieu cho sinh viên"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
